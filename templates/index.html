@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}JSON Converter{% endblock %}
+
+{% block content %}
+
+<div>
+  <form method="POST" enctype="multipart/form-data">
+    <label for="file">1. Choose a file to upload:</label>
+    <input type="file" id="file" name="file">
+    <br>
+    <label for="option">2. Select an option:</label>
+    <select id="option" name="option" class="form-select" style="width:160px;" required>
+      <option value="SUP">Sign-Up Pages</option>
+      <option value="Nutrition">Nutrition (coming soon...)</option>
+      <option value="Meal Plan">Meal Plan (coming soon...)</option>
+      <option value="Health Content">Health Content (coming soon...)</option>
+      <option value="Class Database">Class Database (coming soon...)</option>
+    </select>
+    <br>
+    <button type="submit" class="btn">Convert</button>
+  </form>
+</div>
+
+{% endblock %}
