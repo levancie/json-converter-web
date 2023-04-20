@@ -1,9 +1,13 @@
 from flask import Flask, render_template, request, send_file
 from scripts import transformations
 import os
+from os import environ
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = '20112020DontBeHasty06012022'
+app.secret_key = environ['SECRETKEY']
 
 @app.route('/', methods=['GET','POST'])
 def index():
